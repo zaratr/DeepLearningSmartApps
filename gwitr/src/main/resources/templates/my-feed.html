@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Following Posts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/user-details.css">
+    <link rel="stylesheet" href="/css/feed.css">
+    <link rel="stylesheet" type="text/css" href="css/button.css">
+    <link rel="stylesheet" type="text/css" href="css/button3.css">
+
+</head>
+<body>
+
+
+<header>
+    <div th:replace="/fragments/nav-header"/>
+
+</header>
+    <div class="pond">
+
+<main class="feed-container">
+    <h1>Feed</h1>
+
+    <article class="feed" th:each="post : ${allUserPosts}">
+
+        <div>
+            <a class="profile" th:href="${'/user/' + post.postAuthor.id}"
+               th:text="${post.postAuthor.username}"></a>
+        </div>
+
+
+        <br>
+
+        <blockquote class="post-box">
+            <div class="post-box">
+                <p class="text" th:text="${post.text}"></p>
+                <p class="date" th:text="${post.createdAt}">Date:</p>
+            </div>
+        </blockquote>
+        <h2>Reply's</h2>
+
+        <br>
+
+        <blockquote class="reply-box">
+            <div th:if="${post.replyList != null}" th:each="reply : ${post.getReplyList()}">
+                <p class="text" th:if="${reply != null}" th:text=" ${reply.reply}"></p>
+                <br>
+                <p class="date" th:if="${reply != null}" th:text=" ${reply.replyDate}">Date:</p>
+            </div>
+        </blockquote>
+
+        <blockquote class="reply-form">
+            <div class="reply-container">
+                <form action="/add-Reply" method="post">
+                    <fieldset>
+                        <legend></legend>
+                        <label for="reply">Reply</label>
+                        <input type="text" name="reply" id="reply">
+                        <input type="hidden" name="id" th:value="${post.id}">
+
+                        <input type="submit" value="Submit Post">
+                    </fieldset>
+                </form>
+            </div>
+        </blockquote>
+    </article>
+</main>
+
+    </div>
+<!--    Font Awesome-->
+<script src="https://kit.fontawesome.com/7a5f3d2bb1.js" crossorigin="anonymous"></script>
+<!-- Optional JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<footer th:replace="fragments/footer-minimal :: footer"></footer>
+</body>
+</html>

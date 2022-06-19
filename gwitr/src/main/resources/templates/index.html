@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Welcome Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--    custom css stuff-->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/button.css">
+    <link rel="stylesheet" type="text/css" href="css/button3.css">
+    <link rel="stylesheet" href="/css/feed.css">
+</head>
+<body >
+<div th:replace="/fragments/nav-header"/>
+
+
+
+
+<main style="margin: 2%"  >
+
+
+
+
+
+
+<div class="container lgbtq" style="max-width: 720px;" >
+
+
+
+    <div id="carouselExampleInterval" class="carousel slide text-center" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10">
+                        <img src="/img/gwiterlogo1500x800.png" class="img-fluid" alt="welcome">
+                        <h1>News Feed!</h1>
+                    </div>
+
+                    <div class="carousel-item" th:each="news : ${newsResults}"  >
+<!--                        <img src="..." class="d-block w-100" alt="...">-->
+                        <h2 class="card-title" th:text="${news.title}"></h2>
+                        <figure>
+                            <img class="img-fluid" th:src="${news.getPictureMedium()}"/>
+
+                            <figcaption>
+
+                                <p class="card-text" th:text="${news.abst}"></p>
+                                <a th:href="${news.url}" >More ...</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--        <div class="card-body" style="height: auto" id="crypto">-->
+<!--            <h1>Crypto News!</h1>-->
+<!--            <img class="img-fluid" src="/img/large-hero1.jpg">-->
+<!--            <h5 class="card-title">News Title</h5>-->
+<!--            <p class="card-text">-->
+<!--                News article-->
+<!--            </p>-->
+<!--        </div>-->
+    </div>
+
+
+
+
+
+</main>
+
+
+
+<!-- Back to top button -->
+<button
+        type="button"
+        class="btn btn-danger btn-floating btn-lg"
+        id="btn-back-to-top"
+        style="  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;"
+>
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<div  th:switch="${isSignedin}">
+    <div th:case="${true}">
+
+
+
+
+
+<div >
+        <div class="feed-container">
+
+            <h1>Feed</h1>
+
+            <article class="feed" th:each="post : ${allUserPosts}">
+
+                <div class="rain">
+                    <a class="profile" th:href="${'/user/' + post.postAuthor.id}"
+                       th:text="${post.postAuthor.username}"></a>
+                </div>
+
+
+                <br>
+
+                <blockquote class="post-box">
+                    <div class="post-box">
+                        <p class="text" th:text="${post.text}"></p>
+                        <p class="date" th:text="${post.createdAt}">Date:</p>
+                    </div>
+                </blockquote>
+                <h2>Reply's</h2>
+
+                <br>
+
+                <blockquote class="reply-box">
+                    <div th:if="${post.replyList != null}" th:each="reply : ${post.getReplyList()}">
+                        <p class="text" th:if="${reply != null}" th:text=" ${reply.reply}"></p>
+                        <br>
+                        <p class="date" th:if="${reply != null}" th:text=" ${reply.replyDate}">Date:</p>
+                    </div>
+                </blockquote>
+
+                <blockquote class="reply-form">
+                    <div class="reply-container">
+                        <form class="rain" action="/add-Reply" method="post">
+                            <fieldset>
+                                <legend></legend>
+                                <label for="reply">Reply</label>
+                                <input type="text" name="reply" id="reply">
+                                <input type="hidden" name="id" th:value="${post.id}">
+
+                                <input class="btn" type="submit" value="Submit Post">
+                            </fieldset>
+                        </form>
+                    </div>
+                </blockquote>
+            </article>
+        </div>
+
+
+
+</div>
+
+
+        <footer  th:replace="fragments/footer-minimal :: footer"></footer>
+    </div>
+    <div th:case="${false}">
+        <h1 style="margin: 3%">Please sign in to Check Gwitr feed!</h1>
+       <footer th:replace="fragments/footer-signup"></footer>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<!--    Font Awesome-->
+<script src="https://kit.fontawesome.com/7a5f3d2bb1.js" crossorigin="anonymous"></script>
+<!-- Optional JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!--Custom Js scripts-->
+<script src="js/scrollup.js"></script>
+<!--stuff-->
+</body>
+</html>
