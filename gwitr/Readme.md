@@ -5,7 +5,15 @@
 
 
 
-
+## Feature tasks
+# AI social media feature
+- Smart social media app that detects negative comments and avoids them.
+- posts recommended restaurants based on location and ingredients (voice or pictures)
+- uses its own local models to utilize fast, responsive, secure learning features.
+# Other social media Feature Tasks
+- twitter, tiktok, facebook, instagram sign in for secure and ease of access
+- post and reply to comments
+- view twitter, facebook, tiktok content.
 ****
 
 ## Port Instructions
