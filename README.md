@@ -4,10 +4,17 @@ I decided to take my experience with Artificial intelligence one step further. U
 
 ## Feature Object/image recognition/text recognition locations:
 In this folder, there will be projects focused on Web Applications using Html, Css, Javascript
-[webapps](lib/java/main/etc)
+[Web App](gwitr/Readme.md)
 
 In this folder, there will be projects focused on using Android environment.
-[androidapps](app/java/main/etc)
+[Android Apps](app/java/Readme.md)
+
+## Feature Pose Recognizer :
+In this we find out correct form as it is one of the major issues in fitness. To prevent injuries
+and build on knowledge, the app will count the reps and guide form.
+
+[Fitness App](fitnessapp/Readme.md)
+
 
 ## Project wireframing
 
