@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">poserecognizer</string>
+    <string name="app_name">BetterMe</string>
+    <string name="titleTypeOfWorkouts">Select A Workout</string>
+    <string name="buttonNext">Next</string>
+    <string name="bettermesecondimage">BetterMeSecondImage</string>
+    <string name="weightLiftButtonWithGif">WeightLiftButton</string>
+    <string name="test">test</string>
+    <string name="abdominals">Abdominals</string>
+    <string name="title_activity_gpsactivity">GPSActivity</string>
+    <string name="title_activity_test_google_map">TestGoogleMap</string>
+    <string name="workout_motivational_quote">Motivational Quote</string>
 </resources>
