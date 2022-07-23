@@ -29,13 +29,11 @@ See [REQUIREMENTS](./REQUIREMENTS.md)
 - Update Account using the Navbar.
 - Use the Navbar to navigate App.
 - Select a workout.
-- Search nearest Gym,Park or Supplement stores and get route to them.
+- Search nearest Gym,Park or Supplement stores and get route to them. 
+- Must use Google Api key (https://developers.google.com/maps/documentation/android-sdk/get-api-key) in res>google_map.xml><string name="google_map_key" templateMergeStrategy="preserver" translatable="false">google map key here</string>
+- Make sure to initialize Amplify 
   - Enjoy!
 
-[//]: # (  ![Step 1]&#40;Public/signup.png&#41;)
-[//]: # (  ![Step 2]&#40;Public/update%20info.JPG&#41;)
-[//]: # (  ![Step 3]&#40;Public/selectworkout.png&#41;)
-[//]: # (  ![Gps]&#40;Public/img.png&#41;)
   <img src="Public/signup.png" alt="Step1" width="250">
   <img src="Public/updateinfo.JPG" alt="Step2" width="250">
   <img src="Public/selectworkout.png" alt="Step3" width="250">
@@ -58,6 +56,7 @@ See [REQUIREMENTS](./REQUIREMENTS.md)
 - Android APK v
 - Java JDK 17
 - Use Google API Key by placing it in: ()
+- if using intellij make sure to update IDE and downgrade gradle version (current issue with gradle and Intellij)
 
 ## The Team
 
