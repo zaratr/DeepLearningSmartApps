@@ -12,7 +12,7 @@
         />
     <item android:title="gps"
         android:id="@+id/gps_nav"
-        android:icon="@drawable/ic_gps_placeholder_vector"
+        android:icon="@drawable/ic_gps_pin_24"
         />
 <!--    <item android:title="log"-->
 <!--        android:id="@+id/log_nav"-->
