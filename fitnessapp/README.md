@@ -31,12 +31,10 @@ See [REQUIREMENTS](./REQUIREMENTS.md)
 - Select a workout.
 - Search nearest Gym,Park or Supplement stores and get route to them.
 - Enjoy!
-- <img src="Public/signup.png" alt="step1" width="200"
-- ![Step 1](Public/signup.png)
+- ![Step 1](Public/signup.png = x250)
 - ![Step 2](Public/update%20info.JPG)
 - ![Step 3](Public/selectworkout.png)
 - ![Gps](Public/img.png)
-
 
 ### Development Requirements
 
