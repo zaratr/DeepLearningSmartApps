@@ -31,9 +31,9 @@ See [REQUIREMENTS](./REQUIREMENTS.md)
 - Select a workout.
 - Search nearest Gym,Park or Supplement stores and get route to them.
   - Enjoy!
-  ![Step 1](Public/signup.png=x250)
-  ![Step 2](Public/update%20info.JPG=x250)
-  ![Step 3](Public/selectworkout.png=x250)
+  ![Step 1](Public/signup.png=x400)
+  ![Step 2](Public/update%20info.JPG=x400)
+  ![Step 3](Public/selectworkout.png=x400)
   ![Gps](Public/img.png=x250)
 
 ### Development Requirements
