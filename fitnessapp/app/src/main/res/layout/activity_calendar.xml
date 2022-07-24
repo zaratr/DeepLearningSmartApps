@@ -16,7 +16,20 @@
         app:menu="@menu/bottom_nav_menu" />
 
 
+    <ImageView
+        android:id="@+id/notePadCalendar"
+        android:layout_width="484dp"
+        android:layout_height="532dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/calendarnotepad2" />
+
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -30,12 +43,13 @@
             android:layout_marginBottom="20dp"
             android:orientation="horizontal">
 
-            <Button
+            <ImageButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
                 android:onClick="previousMonthAction"
+                android:src="@drawable/quantum_ic_arrow_back_grey600_24"
                 android:text="Back"
                 android:textColor="@color/BlackRed"
                 android:textSize="20sp"
@@ -51,12 +65,14 @@
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
-            <Button
+            <ImageButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
                 android:onClick="nextMonthAction"
+                android:rotation="180"
+                android:src="@drawable/quantum_ic_arrow_back_grey600_24"
                 android:text="@string/buttonNext"
                 android:textColor="@color/BlackRed"
                 android:textSize="20sp"
@@ -140,6 +156,7 @@
             android:id="@+id/calendarRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="500dp" />
+
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
