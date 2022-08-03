@@ -6,7 +6,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.social.twitter.api.Twitter;
 import org.springframework.social.twitter.api.impl.TwitterTemplate;
 import org.springframework.stereotype.Component;
-
+/*
 @Component
 public class TwitterTemplateCreator {
     @Autowired
@@ -21,7 +21,7 @@ public class TwitterTemplateCreator {
     @Value("${accessTokenSecret}")
     private String userAccessTokenSecret;
 
-    public Twitter getTwitterTemplate(/*String accountName*/) throws NullPointerException
+    public Twitter getTwitterTemplate() throws NullPointerException
     {
         String accountName = "gwitter-project";
 
@@ -38,3 +38,4 @@ public class TwitterTemplateCreator {
     }
 
 }
+*/
