@@ -31,25 +31,6 @@ public class WorkoutPageFirst extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_page_first);
 
-        // https://www.youtube.com/watch?v=xPi-z3nOcn8
-        // Instantiate the RequestQueue.
-        RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "https://zenquotes.io/api/quotes";
-
-        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, response -> {
-            String quote = "";
-            try {
-//                textView.setText("Response is: " + response.getJSONObject(0));
-                JSONObject allQuoteData = response.getJSONObject(0);
-                quote = " \" " + allQuoteData.getString("q") + "\"\n " + " - " + allQuoteData.getString("a");
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            final TextView textView = (TextView) findViewById(R.id.motivationalQuote);
-            textView.setText(quote);
-        }, error -> Toast.makeText(WorkoutPageFirst.this, "Something went wrong", Toast.LENGTH_SHORT).show());
-
-        queue.add(request);
 
         //function declarations:
 

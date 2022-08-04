@@ -130,21 +130,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
-    <TextView
-        android:id="@+id/motivationalQuote"
-        android:layout_width="385dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="casual"
-        android:text="@string/workout_motivational_quote"
-        android:textAlignment="center"
-        android:textColor="@color/LightGrey"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Icon2" />
+
 
     <TextView
         android:id="@+id/textViewAbs"

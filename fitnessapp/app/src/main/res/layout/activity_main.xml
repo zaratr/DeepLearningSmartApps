@@ -6,19 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
-
-    <SurfaceView
-        android:id="@+id/videoBackground1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:foregroundGravity="center"
+    <!--NAVBAR STUFF-->
+    <TextView
+        android:id="@+id/motivationalQuote"
+        android:layout_width="385dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="556dp"
+        android:fontFamily="casual"
+        android:text="@string/workout_motivational_quote"
+        android:textAlignment="center"
+        android:textColor="@color/LightGrey"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!--NAVBAR STUFF-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
@@ -29,13 +35,4 @@
         app:menu="@menu/bottom_nav_menu"/>
     <!--NAVBAR STUFF-->
 
-    <ImageView
-        android:id="@+id/iconMainActivity"
-        android:layout_width="416dp"
-        android:layout_height="589dp"
-        app:layout_constraintBottom_toBottomOf="@+id/videoBackground1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
-<!--        //app:srcCompat="@drawable/icon1"-->
 </androidx.constraintlayout.widget.ConstraintLayout>
