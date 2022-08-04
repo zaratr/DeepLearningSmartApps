@@ -42,100 +42,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        delayIcon();
         navGoTo();
-//        renderBackground();
-        renderBackground2();
     }
 
 
 
-
-
-    private void delayIcon()
-    {
-        ImageView iconDelayer = findViewById(R.id.iconMainActivity);
-        int imagePath = R.drawable.icon1;
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                iconDelayer.setImageResource(imagePath);
-
-            }
-        }, 2000);
-    }
-
-
-//    private void renderBackground()
-//    {
-//        final VideoView videoView = (VideoView) findViewById(R.id.videoBackground1);
-//        final String videopath = Uri.parse("android.resource://"+getPackageName() + "/" + R.raw.workout_intro).toString();
-//        videoView.setVideoPath(videopath);
-//        videoView.start();
-//        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-//            @Override
-//            public void onPrepared(MediaPlayer mediaPlayer) {
-//                mediaPlayer.start();
-//                mediaPlayer.setLooping(true);
-//            }
-//        });
-//        videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener(){
-//            @Override
-//            public void onCompletion(MediaPlayer mediaPlayer)
-//            {
-//                videoView.setVideoPath(videopath);
-//                videoView.start();
-//            }
-//        });
-//    }
-
-    private void renderBackground2()
-    {
-
-        //NOTES :  https://developpaper.com/android-uses-surfaceview-mediaplayer-to-play-video/
-        //NOTES : https://itecnote.com/tecnote/java-full-screen-videoview-without-stretching-the-video/
-        surfaceView = (SurfaceView) findViewById(R.id.videoBackground1);
-        player = new MediaPlayer();
-        try {
-            player.setDataSource(this, Uri.parse("android.resource://"+getPackageName() + "/" + R.raw.workout_intro) );
-            holder= surfaceView.getHolder();
-            holder.addCallback(new MyCallBack());
-            player.prepare();
-            player.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mediaPlayer) {
-
-
-                    // so it fits on the screen
-                    int videoWidth = player.getVideoWidth();
-                    int videoHeight = player.getVideoHeight();
-                    float videoProportion = (float) videoWidth / (float) videoHeight;
-                    int screenWidth = getWindowManager().getDefaultDisplay().getWidth();
-                    int screenHeight = getWindowManager().getDefaultDisplay().getHeight();
-                    float screenProportion = (float) screenWidth / (float) screenHeight;
-                    android.view.ViewGroup.LayoutParams lp = surfaceView.getLayoutParams();
-
-                    if (videoProportion > screenProportion) {
-                        lp.width = (1) * videoWidth;
-                        lp.height = (1/2) * videoWidth;
-//                        lp.width = screenWidth;
-//                        lp.height = (int) ((float) screenWidth / videoProportion);
-                    } else {
-                        lp.width = (int) (videoProportion * (float) screenHeight);
-                        lp.height = screenHeight;
-                    }
-                    surfaceView.setLayoutParams(lp);
-
-                    player.start();
-                    player.setLooping(true);
-                }
-            });
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
 
 
 
@@ -185,21 +96,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });//end lambda: bottomNavview
     }//end method: navGoTo
-    private class MyCallBack implements SurfaceHolder.Callback{
 
-        @Override
-        public void surfaceCreated(@NonNull SurfaceHolder surfaceHolder) {
-            player.setDisplay(holder);
-        }
-
-        @Override
-        public void surfaceChanged(@NonNull SurfaceHolder surfaceHolder, int format, int width, int height) {
-
-        }
-
-        @Override
-        public void surfaceDestroyed(@NonNull SurfaceHolder surfaceHolder) {
-        }
-    }//END: class MyCallback - implements sufaceholder.callback
 }//end class:
 

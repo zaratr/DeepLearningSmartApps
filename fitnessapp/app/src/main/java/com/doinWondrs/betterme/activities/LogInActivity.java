@@ -117,7 +117,7 @@ public class LogInActivity extends AppCompatActivity {
                 iconDelayer.setImageResource(imagePath);
 
             }
-        }, 2000);
+        }, 3000);
     }
 
 
