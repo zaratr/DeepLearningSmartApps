@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,6 +53,15 @@ public class MainActivity extends AppCompatActivity {
 
         renderQuotes();
         navGoTo();
+        goToSpotter();
+    }
+
+    private void goToSpotter(){
+        Button toTrainer = findViewById(R.id.buttonTrainer);
+        toTrainer.setOnClickListener(view -> {
+            Intent goToTrainer = new Intent(this, TrainerActivity.class);
+            startActivity(goToTrainer);
+        });
     }
 
     private void renderQuotes(){

@@ -9,4 +9,8 @@
     <string name="title_activity_gpsactivity">GPSActivity</string>
     <string name="title_activity_test_google_map">TestGoogleMap</string>
     <string name="workout_motivational_quote">Motivational Quote</string>
+    <string name="pref_key_camera_live_viewport" translatable="false">clv</string>
+    <string name="pref_key_camerax_rear_camera_target_resolution" translatable="false">crctas</string>
+    <string name="pref_key_camerax_front_camera_target_resolution" translatable="false">cfctas</string>
+    <string name="pref_key_live_preview_pose_detection_performance_mode" translatable="false">lppdpm</string>
 </resources>
