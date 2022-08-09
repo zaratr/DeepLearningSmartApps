@@ -33,7 +33,7 @@ See [REQUIREMENTS](./REQUIREMENTS.md)
 - Must use Google Api key (https://developers.google.com/maps/documentation/android-sdk/get-api-key) in res>google_map.xml><string name="google_map_key" templateMergeStrategy="preserver" translatable="false">google map key here</string>
 - Make sure to initialize Amplify
 
-  <img src="Public/loginvideo.mp4" alt="login" width="250">
+  <img src="Public/loginvideo.gif" alt="login" width="250">
   <img src="Public/signup.png" alt="Step1" width="250">
   <img src="Public/updateinfo.JPG" alt="Step2" width="250">
   <img src="Public/selectworkout.png" alt="Step3" width="250">
