@@ -24,6 +24,7 @@ I solve it by using Machine learning to avoid bad language and invite anyone wit
 
 ## Feature Cravings Finder Smart App
 - In this project, we use ML to find the nearest restaurant with the ingredients snapshotted!
+- To be continued..
 - Stretch goal: Find recipe's based on ingredients.
 [LeChef](smartapp/Readme.md)
 
