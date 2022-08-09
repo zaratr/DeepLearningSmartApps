@@ -20,7 +20,7 @@ I solve it by using Machine learning to avoid bad language and invite anyone wit
 - In this project, I built a Android application that will recognize excercises and find out correct form as it is one of the major issues in fitness - Health and Safety.
 - To prevent injuries this app saves money and help those who prefer not to use a personal trainer. Futher, this app helps build on knowledge, count the reps, enouraging quotes, schedule a Monthly/Weekly/Daily workout plan and goals, and guide form.
 - Click link to find out more: 
-[Fitness App](fitnessapp/Readme.md)
+[Fitness App](fitnessapp/README.md)
 
 ## Feature Cravings Finder Smart App
 - In this project, we use ML to find the nearest restaurant with the ingredients snapshotted!
