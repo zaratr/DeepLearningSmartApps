@@ -1,5 +1,4 @@
-# The BetterMe App
-
+# The BetterMe App <img src="Public/icon1.png" alt="login" width="250">
 ## Project Summary
 
 BetterMe gives new and regular gym users a place to record their BMI and display a history log that shows a workout streak Mon-Fri.
