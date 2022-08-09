@@ -34,6 +34,7 @@ See [REQUIREMENTS](./REQUIREMENTS.md)
 - Make sure to initialize Amplify 
   - Enjoy!
 
+  <img src="Public/loginvideo.mp4" alt="Step1" width="250">
   <img src="Public/signup.png" alt="Step1" width="250">
   <img src="Public/updateinfo.JPG" alt="Step2" width="250">
   <img src="Public/selectworkout.png" alt="Step3" width="250">
@@ -77,10 +78,10 @@ Chuck Altopiedi [GitHub](https://github.com/ChuckAlto)
 Jon Rumsey [GitHub](https://github.com/nojronatron)
 
 ## Resources
-<a target="_blank" href="https://icons8.com/icon/v551nqGeHhGn/github">GitHub</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-<a target="_blank" href="https://icons8.com/icon/UyatB5WgOdeP/linkedin-circled">LinkedIn Circled</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-<a target="_blank" href="https://icons8.com/icon/ZvjnlgX9t1tb/gym">Gym</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-<a target="_blank" href="https://icons8.com/icon/i8S0UHJ4f47y/pill">Pill</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-<a target="_blank" href="https://icons8.com/icon/j0vWxQ4slW7i/park">Park</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-https://www.geeksforgeeks.org/how-to-create-an-expandable-cardview-in-android/
-https://www.geeksforgeeks.org/cardview-using-recyclerview-in-android-with-example/
+- <a target="_blank" href="https://icons8.com/icon/v551nqGeHhGn/github">GitHub</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+- <a target="_blank" href="https://icons8.com/icon/UyatB5WgOdeP/linkedin-circled">LinkedIn Circled</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+- <a target="_blank" href="https://icons8.com/icon/ZvjnlgX9t1tb/gym">Gym</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+- <a target="_blank" href="https://icons8.com/icon/i8S0UHJ4f47y/pill">Pill</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+- <a target="_blank" href="https://icons8.com/icon/j0vWxQ4slW7i/park">Park</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+- https://www.geeksforgeeks.org/how-to-create-an-expandable-cardview-in-android/
+- https://www.geeksforgeeks.org/cardview-using-recyclerview-in-android-with-example/
