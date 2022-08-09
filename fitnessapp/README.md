@@ -38,6 +38,7 @@ See [REQUIREMENTS](./REQUIREMENTS.md)
   <img src="Public/updateinfo.JPG" alt="Step2" width="250">
   <img src="Public/selectworkout.png" alt="Step3" width="250">
   <img src="Public/img.png" alt="step 4" width="250">
+  <img src="Public/posedetection.gif" alt="MLVideo" width="250">
       
 
 ### Development Requirements
