@@ -26,8 +26,8 @@ import com.google.mlkit.vision.pose.Pose;
 import com.google.mlkit.vision.pose.PoseDetection;
 import com.google.mlkit.vision.pose.PoseDetector;
 import com.google.mlkit.vision.pose.PoseDetectorOptionsBase;
-import com.doinWondrs.betterme.activities.GraphicOverlay;
-import com.doinWondrs.betterme.activities.VisionProcessorBase;
+import com.doinWondrs.betterme.activities.mlhelpers.GraphicOverlay;
+import com.doinWondrs.betterme.activities.mlhelpers.VisionProcessorBase;
 import com.doinWondrs.betterme.activities.posedetector.classification.PoseClassifierProcessor;
 
 import java.util.ArrayList;

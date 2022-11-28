@@ -1,6 +1,6 @@
 
 
-package com.doinWondrs.betterme.activities;
+package com.doinWondrs.betterme.activities.mlhelpers;
 
 import android.graphics.Canvas;
 import android.graphics.Color;

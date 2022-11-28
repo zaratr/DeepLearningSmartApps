@@ -1,6 +1,6 @@
 
 
-package com.doinWondrs.betterme.activities;
+package com.doinWondrs.betterme.activities.mlhelpers;
 
 import android.app.ActivityManager;
 import android.app.ActivityManager.MemoryInfo;
@@ -21,8 +21,6 @@ import com.google.android.odml.image.MlImage;
 import com.google.mlkit.common.MlKitException;
 import com.google.mlkit.vision.common.InputImage;
 import com.doinWondrs.betterme.activities.preference.PreferenceUtils;
-import com.doinWondrs.betterme.activities.ScopedExecutor;
-import com.doinWondrs.betterme.activities.TemperatureMonitor;
 
 import java.nio.ByteBuffer;
 import java.util.Timer;
