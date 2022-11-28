@@ -1,5 +1,5 @@
 
-package com.doinWondrs.betterme.activities;
+package com.doinWondrs.betterme.activities.mlhelpers;
 
 /** Describing a frame info. */
 public class FrameMetadata {

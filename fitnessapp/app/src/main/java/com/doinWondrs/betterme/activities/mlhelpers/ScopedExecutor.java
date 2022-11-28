@@ -1,6 +1,6 @@
 
 
-package com.doinWondrs.betterme.activities;
+package com.doinWondrs.betterme.activities.mlhelpers;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.atomic.AtomicBoolean;

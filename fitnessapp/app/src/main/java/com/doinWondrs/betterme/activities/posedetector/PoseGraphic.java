@@ -24,7 +24,7 @@ import com.google.common.primitives.Ints;
 import com.google.mlkit.vision.common.PointF3D;
 import com.google.mlkit.vision.pose.Pose;
 import com.google.mlkit.vision.pose.PoseLandmark;
-import com.doinWondrs.betterme.activities.GraphicOverlay;
+import com.doinWondrs.betterme.activities.mlhelpers.GraphicOverlay;
 
 import java.util.List;
 import java.util.Locale;

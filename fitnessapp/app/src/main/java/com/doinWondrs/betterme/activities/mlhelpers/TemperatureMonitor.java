@@ -1,4 +1,4 @@
-package com.doinWondrs.betterme.activities;
+package com.doinWondrs.betterme.activities.mlhelpers;
 
 import android.content.Context;
 import android.hardware.Sensor;
